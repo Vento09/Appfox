@@ -4,7 +4,7 @@ With Appfox, you can create web app using the engine of Mozilla Firefox on Linux
 
 1. Run this command:
 ```
-firefox --ProfileManager app
+firefox --ProfileManager
 ```
 2. Clone or download this repository
 3. Open terminal in the folder that you have downloaded 
