@@ -1,3 +1,6 @@
 #!/bin/bash
 
-rm ~/.local/share/applications/$1.desktop
+echo "What is the WebApp you want to delete?
+read del
+
+rm ~/.local/share/applications/$del.desktop
