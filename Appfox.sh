@@ -44,4 +44,6 @@ echo "Icon=$icon" >> "$name".desktop
 
 mv "$name".desktop ~/.local/share/applications
 
+notify-send "$name was create" 'Go to the menu for try it!' --icon=$icon
+
 echo "All done. Enjoy with it!"
