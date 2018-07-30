@@ -10,11 +10,12 @@ With Appfox, you can create web app using the engine of Mozilla Firefox on Linux
 ```
 ./Appfox.sh
 ```
-4.Add the name, url address and the icon name. **DO NOT USE SPACE**
+4.Add the name, url address and the icon name. **DO NOT USE SPACE IN URL ADRESS AND ICON**
 
 Enjoy if it!
 
 ### Deleting
+**It is not working now!!** 
 
 1. Open terminal in the folder that you have downloaded it ;
 2. Run 
@@ -31,10 +32,7 @@ DONE
   
 It's normal! If you want to see the tab press CTRL+TAB  to see the other tabs. You can close it pressing CTRL+W
 
-* **I have to connect with the same accounts every time!**
+* **"I have to connect with the accounts that I saved with firefox sync!"**
   
-  Firefox profile save your accounts in different folders. So every time you create a new app you have to connect with your account again.
+  Firefox profile save your accounts in different folders. So every time you create a new web app you have to connect with your account again.
 
-* **I used space to create a app. What should I have to do?**
-
-  First, don't it again! This app is simple and I don't know how configure to show space. Just delete the app using the archive delete.sh
