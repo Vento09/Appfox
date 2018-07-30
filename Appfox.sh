@@ -4,14 +4,6 @@ echo "Let's start!"
 
 # Questions
 
-cat Witn.txt
-
-echo "Put the next number bellow"
-read num
-
-# Changing the archive What is the number 
-echo "$num" > Witn.txt
-
 echo "What is the name of the WebApp?"
 read name
 
@@ -23,26 +15,34 @@ read icon
 
 echo "Configuring the application"
 
+# Changing the archive "Witn.txt" for the profile number 
+export declare nume=$(cat Witn.txt)
+let "nume += 1"
+echo "$nume" > Witn.txt
+
+# Random name for the folders based on seconds
+second=$(date +%s) 
+
 # Creating the Firefox profile 
 
-mkdir ~/.mozilla/firefox/appfox."$name"
+mkdir ~/.mozilla/firefox/appfox.$second
 
-echo "[Profile${num}]" >> ~/.mozilla/firefox/profiles.ini
-echo "Name=$name" >> ~/.mozilla/firefox/profiles.ini
+echo "[Profile${nume}]" >> ~/.mozilla/firefox/profiles.ini
+echo "Name=$second" >> ~/.mozilla/firefox/profiles.ini
 echo "IsRelative=1" >> ~/.mozilla/firefox/profiles.ini
-echo "Path=appfox.$name" >> ~/.mozilla/firefox/profiles.ini
+echo "Path=appfox.$second" >> ~/.mozilla/firefox/profiles.ini
 
-mkdir ~/.mozilla/firefox/appfox."$name"/chrome 
-cp userChrome.css ~/.mozilla/firefox/appfox."$name"/chrome
+mkdir ~/.mozilla/firefox/appfox.$second/chrome 
+cp userChrome.css ~/.mozilla/firefox/appfox.$second/chrome
 
 # Creating the launcher 
-cp Principal.desktop "$name".desktop
+cp Principal.desktop $second.desktop
 
-echo "Name=$name" >> "$name".desktop
-echo "Exec=firefox -P "$name" $url" >> "$name".desktop
-echo "Icon=$icon" >> "$name".desktop
+echo "Name=$name" >> $second.desktop
+echo "Exec=firefox -P $second $url" >> $second.desktop
+echo "Icon=$icon" >> $second.desktop
 
-mv "$name".desktop ~/.local/share/applications
+mv $second.desktop ~/.local/share/applications
 
 notify-send "$name was create" 'Go to the menu for try it!' --icon=$icon
 
