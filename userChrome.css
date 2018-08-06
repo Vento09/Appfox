@@ -1,8 +1,10 @@
-#TabsToolbar {
+#identity-box, #navigator-toolbox::after, #TabsToolbar 
+{
     visibility: collapse;
 }
 
 #nav-bar {
-    visibility: collapse;
+    visibility: collapse !important;
+    max-height: 0 !important
+    margin-bottom: -20px !important;
 }
-
