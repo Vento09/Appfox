@@ -36,13 +36,13 @@ mkdir ~/.mozilla/firefox/appfox.$second/chrome
 cp userChrome.css ~/.mozilla/firefox/appfox.$second/chrome
 
 # Creating the launcher 
-cp Principal.desktop $second.desktop
+cp Principal.desktop "$name".desktop
 
-echo "Name=$name" >> $second.desktop
-echo "Exec=firefox -P $second $url" >> $second.desktop
-echo "Icon=$icon" >> $second.desktop
+echo "Name=$name" >> "$name".desktop
+echo "Exec=firefox -P $second $url" >> "name".desktop
+echo "Icon=$icon" >> "$name".desktop
 
-mv $second.desktop ~/.local/share/applications
+mv "$name".desktop ~/.local/share/applications
 
 notify-send "$name was create" 'Go to the menu for try it!' --icon=$icon
 
