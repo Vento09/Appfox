@@ -2,6 +2,8 @@
 
 With Appfox, you can create web app using the Mozilla Firefox engine on Linux. The Appfox uses Firefox profiles. For use it, follow the steps below.
 
+![Screenshoot of Appfox using the YouTube site](/Screenshoot.png)
+
 ### Instalation
 
 1. Clone or download this repository;
