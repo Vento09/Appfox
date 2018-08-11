@@ -39,7 +39,7 @@ cp userChrome.css ~/.mozilla/firefox/appfox.$second/chrome
 cp Principal.desktop "$name".desktop
 
 echo "Name=$name" >> "$name".desktop
-echo "Exec=firefox -P $second $url" >> "name".desktop
+echo "Exec=firefox -P $second $url" >> "$name".desktop
 echo "Icon=$icon" >> "$name".desktop
 
 mv "$name".desktop ~/.local/share/applications
