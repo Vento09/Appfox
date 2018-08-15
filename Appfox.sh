@@ -44,6 +44,12 @@ echo "Icon=$icon" >> "$name".desktop
 
 mv "$name".desktop ~/.local/share/applications
 
+# Restoring passwords and logins saved
+ln -s -t ~/.mozilla/firefox/appfox.$second/ ~/.mozilla/firefox/*.default/key4.db 
+ln -s -t ~/.mozilla/firefox/appfox.$second/ ~/.mozilla/firefox/*.default/logins.json 
+cp ~/.mozilla/firefox/*.default/cert9.db ~/.mozilla/firefox/appfox.$second
+cp prefs.js ~/.mozilla/firefox/appfox.$second
+
 notify-send "$name was create" 'Go to the menu for try it!' --icon=$icon
 
 echo "All done. Enjoy with it!"
