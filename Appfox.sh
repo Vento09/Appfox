@@ -28,6 +28,7 @@ second=$(date +%s)
 mkdir ~/.mozilla/firefox/appfox.$second
 
 echo "[Profile${nume}]" >> ~/.mozilla/firefox/profiles.ini
+echo "# $name" >> ~/.mozilla/firefox/profiles.ini
 echo "Name=$second" >> ~/.mozilla/firefox/profiles.ini
 echo "IsRelative=1" >> ~/.mozilla/firefox/profiles.ini
 echo "Path=appfox.$second" >> ~/.mozilla/firefox/profiles.ini
@@ -48,7 +49,7 @@ mv "$name".desktop ~/.local/share/applications
 ln -s -t ~/.mozilla/firefox/appfox.$second/ ~/.mozilla/firefox/*.default/key4.db 
 ln -s -t ~/.mozilla/firefox/appfox.$second/ ~/.mozilla/firefox/*.default/logins.json 
 cp ~/.mozilla/firefox/*.default/cert9.db ~/.mozilla/firefox/appfox.$second
-cp prefs.js ~/.mozilla/firefox/appfox.$second
+cp user.js ~/.mozilla/firefox/appfox.$second
 
 notify-send "$name was create" 'Go to the menu for try it!' --icon=$icon
 
