@@ -12,7 +12,13 @@ With Appfox, you can create web app using the Mozilla Firefox engine on Linux. T
 ```
 ./Appfox.sh
 ```
-4.Write the name, url address and the icon name. **DO NOT USE SPACE IN URL ADDRESS AND ICON**
+4. Write the name, url address and the icon name. **DO NOT USE SPACE IN URL ADDRESS AND ICON**
+
+5. Run
+```
+sudo cp firefox.desktop /usr/share/applications
+```
+This last command is really necessary because if you open first a web app and then open the firefox, it will open a new window using the web app profile. So everytime firefox upgrades, run this command! 
 
 Enjoy it!
 
@@ -29,11 +35,10 @@ DONE! :)
 
 ### It happens
 
-* **Firefox is saying there more tabs when I close it**
+* **Firefox is saying that there more tabs than one when I close it**
   
-It's normal! If you want to see the tab press CTRL+TAB  to see the other tabs. You can close it pressing CTRL+W. It is normal when you open for the first time.
+It's normal! If you want to see the tab press CTRL+TAB  to see the other tabs. You can close it pressing CTRL+W. 
 
 * **"I have to connect with the accounts that I saved with firefox sync!"**
   
-  Firefox profile save your accounts in different folders. So every time you create a new web app you have to connect with your account again.
-
+  Firefox profile saves your accounts in different folders. Sometimes you should have to connect first in the browser then in the web app. 
