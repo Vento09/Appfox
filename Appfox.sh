@@ -74,6 +74,7 @@ touch user.js
 echo "user_pref(\"app.normandy.first_run\", false);" >> user.js
 echo "user_pref(\"browser.cache.disk.smart_size.first_run\", false);" >> user.js
 echo "user_pref(\"toolkit.telemetry.reportingpolicy.firstRun\", false);" >> user.js
+echo "user_pref(\"browser.link.open_newwindow\", 2);" >> user.js
 
 mv user.js ~/.mozilla/firefox/appfox.$nume/
 
